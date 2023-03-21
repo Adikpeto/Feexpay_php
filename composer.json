@@ -1,18 +1,18 @@
 {
-    "name": ":vendor/:package_name",
+    "name": "Adikpeto/Feexpay",
     "type": "library",
-    "description": ":package_description",
+    "description": "Agrégateur de paiement",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "Adikpeto",
+        "Feexpay"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/Adikpeto/Feexpay",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Adikpeto",
+            "email": "adikpetoaristidezeus@gmail.com",
+            "homepage": "https://github.com/Adikpeto",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            ":vendor\\:package_name\\": "src"
+            "Adikpeto\\Feexpay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":vendor\\:package_name\\": "tests"
+            "Adikpeto\\Feexpay\\": "tests"
         }
     },
     "scripts": {
