@@ -9,7 +9,7 @@ class Feexpay
     /**
      * Create a new Skeleton Instance
      */
-    public function __construct(string $id)
+    public function __construct(string $id,string $token)
     {
         // constructor body
     
