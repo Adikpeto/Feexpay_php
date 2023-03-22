@@ -22,13 +22,18 @@ class Feexpay
 
     public function getIdAndMarchanName()
     {
-        $curl = curl_init("https://api.feexpay.me/api/shop/$this->id/get_shop");
-        curl_setopt($curl, CURLOPT_CAINFO, __DIR__ . DIRECTORY_SEPARATOR . 'certificats/IXRCERT.crt');
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $responseCurl = curl_exec($curl);
-        $responseData = json_decode($responseCurl);
-        curl_close($curl);
-        return $responseData;
+        try {
+             $curl = curl_init("https://api.feexpay.me/api/shop/$this->id/get_shop");
+            curl_setopt($curl, CURLOPT_CAINFO, __DIR__ . DIRECTORY_SEPARATOR . 'certificats/IXRCERT.crt');
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $responseCurl = curl_exec($curl);
+            $responseData = json_decode($responseCurl);
+            curl_close($curl);
+            return $responseData;
+        } catch (\Throwable $th) {
+            echo "Id Request not send";
+        }
+       
 
     }
     public function paiementLocal(float $amount, string $phoneNumber, string $operatorName, string $fullname, string $email)
