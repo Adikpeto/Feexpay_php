@@ -2,6 +2,7 @@
     "name": "adikpeto/feexpay",
     "type": "library",
     "description": "Agrégateur de paiement",
+    "version": "1.0.0",
     "keywords": [
         "Adikpeto",
         "Feexpay"
